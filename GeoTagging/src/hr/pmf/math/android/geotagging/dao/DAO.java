@@ -10,6 +10,6 @@ public interface DAO {
 	
 	public void deleteEntry(String id);
 	
-	public void addEntry(String title, String description, String location, String path);
+	public void addEntry(String title, String description, String path);
 	
 }

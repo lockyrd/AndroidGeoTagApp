@@ -2,31 +2,36 @@ package hr.pmf.math.android.geotagging.dao;
 
 import java.util.List;
 
+import android.database.sqlite.SQLiteDatabase;
+
+@SuppressWarnings("unused")
 public class SQLDAO implements DAO {
+	
+	private DBAdapter db;
+	
+	public SQLDAO(DBAdapter adapter){
+		this.db = adapter;
+	}
 
 	@Override
 	public TagEntry getEntry(String id) {
-		// TODO Auto-generated method stub
-		return null;
+		return db.getEntry(id);
 	}
 
 	@Override
 	public List<TagEntry> getEntries() {
-		// TODO Auto-generated method stub
-		return null;
+		return db.getEntries();
 	}
 
 	@Override
 	public void deleteEntry(String id) {
-		// TODO Auto-generated method stub
-
+		db.deleteEntry(id);
 	}
 
 	@Override
-	public void addEntry(String title, String description, String location,
+	public void addEntry(String title, String description,
 			String path) {
-		// TODO Auto-generated method stub
-
+		db.addEntry(title,description,path);
 	}
 
 }

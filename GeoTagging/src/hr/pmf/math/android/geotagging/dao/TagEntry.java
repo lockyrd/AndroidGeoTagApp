@@ -4,16 +4,13 @@ public class TagEntry {
 	private String id;
 	private String title;
 	private String description;
-	private String location;
 	private String path;
 	
-	public TagEntry(String id, String title, String description,
-			String location, String path) {
+	public TagEntry(String id, String title, String description, String path) {
 		super();
 		this.id = id;
 		this.title = title;
 		this.description = description;
-		this.location = location;
 		this.path = path;
 	}
 
@@ -27,10 +24,6 @@ public class TagEntry {
 
 	public String getDescription() {
 		return description;
-	}
-
-	public String getLocation() {
-		return location;
 	}
 
 	public String getPath() {
