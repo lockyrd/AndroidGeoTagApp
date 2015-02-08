@@ -9,8 +9,7 @@ public class DAOProvider {
 	
 	public static DAO getDAO(Context context){
 		if(dao == null){
-			DBAdapter adapter = new DBAdapter(context);
-			dao = new SQLDAO(adapter);
+			dao = new SQLDAO(new DBAdapter(context));
 			
 		}
 		return dao;
